@@ -8,7 +8,7 @@ Import the required libraries:
 -datetime and time for date/time manipulation,
 
 -csv for manually reading CSV files row by row.
-#########################################
+##############################################
 Lines 5–7:
 -Define the file path to your CSV file:
 -file_path stores the location of the CSV file you'll read.
@@ -16,7 +16,7 @@ Lines 5–7:
 You must manually change this path to match the location of your CSV file on your computer.
 For example, change it to:
 "C:\\Users\\YourName\\Documents\\your_file.csv"
-##############################################
+###################################################
 Lines 9–14:
 Open and read the CSV manually:
 
@@ -30,7 +30,7 @@ Open and read the CSV manually:
 Create a DataFrame using the data and headers:
 
 -Builds a structured table (df) with labeled columns using pandas.
-###################################################
+####################################################
 Lines 19–21:
 Define two date strings that will be assigned based on time:
 
@@ -43,7 +43,7 @@ You need to manually choose these two dates(each date in format dd:mm:yyyy):
 date_input_1: will be assigned to rows where Time is between 20:00 (8 PM) and 00:00.
 
 date_input_2: will be assigned to rows where Time is between 00:00 and before 20:00 (8 PM).
-######################################################
+########################################################
 Lines 24–25:
 Convert the date strings to real datetime objects:
 
@@ -55,12 +55,12 @@ Search for the "Time" column in the DataFrame:
 - Loop through column names and check for a case-insensitive match to "Time".
 
 - Save the matched column name in time_column.
-#######################################################
+##############################################################
 Line 35:
 Define the evening cutoff time:
 
 - evening_threshold is set to 8:00 PM (20:00:00) to determine which date to apply.
-########################################################
+##################################################################
 Lines 37–47:
 Define a function assign_date(val):
 
@@ -71,7 +71,7 @@ Define a function assign_date(val):
 -If the time is before 8:00 PM, return date2.
 
 -If conversion fails (bad format), return "Invalid".
-########################################################
+##########################################################
 Lines 50–58:
 Apply the time-based logic and export a new CSV:
 
